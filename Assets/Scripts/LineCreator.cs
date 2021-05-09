@@ -12,16 +12,16 @@ public class LineCreator : MonoBehaviour
 	{
 		if (Input.GetMouseButtonDown(0))
 		{
-			GameObject lineGO = Instantiate(linePrefab);
-			activeLine = lineGO.GetComponent<Line>();
+			GameObject lineGO = Instantiate(linePrefab);			// make a new line
+			activeLine = lineGO.GetComponent<Line>();				
 		}
 
 		if (Input.GetMouseButtonUp(0))
 		{
-			activeLine = null;
+			activeLine = null;										// remove connection with the current line when mouse up
 		}
 
-		if (activeLine != null)
+		if (activeLine != null)                                     // keep drawing on the same line when mouse down
 		{
 			Vector3 mouse = Input.mousePosition;
 			mouse.z = 10;
@@ -31,7 +31,7 @@ public class LineCreator : MonoBehaviour
 
 	}
 
-	public void PickLineType(GameObject lineType)		// called in Button onlick() event
+	public void PickLineType(GameObject lineType)		// called in Button onlick() event to replace line type
 	{
 		linePrefab = lineType;
 	}

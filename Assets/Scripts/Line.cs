@@ -22,7 +22,7 @@ public class Line : MonoBehaviour
 	{
 		if (points == null)
 		{
-			points = new List<Vector2>();
+			points = new List<Vector2>();											// make a new list when first create
 			SetPoint(mousePos);
 			return;
 		}
