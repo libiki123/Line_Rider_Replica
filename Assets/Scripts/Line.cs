@@ -12,7 +12,7 @@ public class Line : MonoBehaviour
 
 	private List<Vector2> points;
 
-	private void OnEnable()
+	private void Awake()
 	{
 		lineRenderer = GetComponent<LineRenderer>();
 		edgeColl = GetComponent<EdgeCollider2D>();
